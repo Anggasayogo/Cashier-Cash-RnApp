@@ -62,7 +62,7 @@ function MyTabBar({ state, descriptors, navigation }) {
   }
 
   return (
-    <View style={{ flexDirection: 'row' }}>
+    <View style={apply("row shadow shadow-lg")}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -95,13 +95,14 @@ function MyTabBar({ state, descriptors, navigation }) {
 
         return (
           <TouchableOpacity
+            key={index}
             accessibilityRole="button"
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
             onPress={onPress}
             onLongPress={onLongPress}
-            style={apply("flex items-center justify-center bg-white py-2")}
+            style={apply("flex items-center justify-center bg-white py-2 btw-1")}
             activeOpacity={0.9}
           >
             <View style={apply("items-center")}>

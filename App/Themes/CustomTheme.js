@@ -317,6 +317,7 @@ export default {
   "streak": { textDecorationLine: 'line-through' },
 
   // radius
+  "btw-1": { borderTopWidt: 1 },
   "rounded-1": { borderRadius: 1 },
   "rounded-7": { borderRadius: 7 },
   "rounded-15": { borderRadius: 15 },

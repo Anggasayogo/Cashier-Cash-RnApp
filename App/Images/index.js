@@ -7,6 +7,7 @@ const Images = {
   IcBack: require('./icons/back.png'),
   IcGoogle: require('./icons/google.png'),
   IcFacebook: require('./icons/facebook.png'),
+  IcNext: require('./icons/next.png'),
 
   // BottomTabIcons
   IcHomeActive: require('./bottomtab/home-active.png'),

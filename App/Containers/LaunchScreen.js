@@ -13,8 +13,7 @@ import { apply } from '../Themes/OsmiProvider'
 const LaunchScreen = props => {
   useEffect(()=>{
     setTimeout(()=>{
-      // props.navigation.replace('Onboarding')
-      props.navigation.navigate('MainApp')
+      props.navigation.replace('Onboarding')
     },5000)
   },[])
   return (
