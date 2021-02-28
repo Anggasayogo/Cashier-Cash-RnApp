@@ -36,7 +36,7 @@ const Schema = Yup.object().shape({
 const RegisterScreen = props => {
 
   const handleSubmit = ()=>{
-
+    props.navigation.navigate('MainApp')
   }
 
   const renderForm = formProps =>{

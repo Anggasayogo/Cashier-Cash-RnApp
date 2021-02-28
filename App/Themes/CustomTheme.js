@@ -303,6 +303,7 @@ export default {
   "font-italic": { fontFamily: "Rubik-Italic" },
 
   // font size
+  "text-12": { fontSize: 12 },
   "text-14": { fontSize: 14 },
   "text-24": { fontSize: 24 },
   "text-2xs": { fontSize: 10 },
