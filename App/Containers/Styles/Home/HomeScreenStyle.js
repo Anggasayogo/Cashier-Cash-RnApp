@@ -1,5 +1,5 @@
 import { connect } from '../../../Themes/OsmiProvider'
 
 export default connect({
-  container: 'flex bg-white',
+  container: 'flex bg-white px-4',
 })

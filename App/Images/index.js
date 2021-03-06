@@ -8,6 +8,8 @@ const Images = {
   IcGoogle: require('./icons/google.png'),
   IcFacebook: require('./icons/facebook.png'),
   IcNext: require('./icons/next.png'),
+  IcSearch: require('./icons/icSearch.png'),
+  IcBell: require('./icons/icBell.png'),
 
   // BottomTabIcons
   IcHomeActive: require('./bottomtab/home-active.png'),
@@ -25,6 +27,9 @@ const Images = {
   bgOnBoard1: require('./onboarding/onboarding1.png'),
   bgOnBoard2: require('./onboarding/onboarding2.png'),
   bgOnBoard3: require('./onboarding/onboarding3.png'),
+
+  // Dummy
+  DumyProduk: require('./dummy/produk.png'),
 }
 
 export default Images

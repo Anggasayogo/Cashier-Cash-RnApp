@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { View,Dimensions,Text, FlatList,ScrollView,Image } from 'react-native'
 import SafeAreaView from 'react-native-safe-area-view'
-import { PieChart } from "react-native-chart-kit";
-import Images from '../../Images';
+import Images from '../../Images'
+
+// Components
+import ProdukCard from '../../Components/ProdukCard'
 
 // Styles
 import styles from '../Styles/Home/HomeScreenStyle'
@@ -36,54 +38,6 @@ const HomeScreen = props => {
         color: "orange",
         legendFontColor: "white",
         legendFontSize: 11
-    },{
-        name: "Mei",
-        population: 12.4,
-        color: "#0000FF",
-        legendFontColor: "white",
-        legendFontSize: 11
-    },{
-      name: "Juni",
-      population: 12.4,
-      color: "#00FF00",
-      legendFontColor: "white",
-      legendFontSize: 11
-    },{
-      name: "July",
-      population: 12.4,
-      color: "#FF00FF",
-      legendFontColor: "white",
-      legendFontSize: 11
-    },{
-      name: "Agustus",
-      population: 12.4,
-      color: "#EEE8AA",
-      legendFontColor: "white",
-      legendFontSize: 11
-    },{
-      name: "September",
-      population: 12.4,
-      color: "#00CED1",
-      legendFontColor: "white",
-      legendFontSize: 11
-    },{
-      name: "Oktober",
-      population: 12.4,
-      color: "#8B008B",
-      legendFontColor: "white",
-      legendFontSize: 11
-    },{
-      name: "November",
-      population: 12.4,
-      color: "#A0522D",
-      legendFontColor: "white",
-      legendFontSize: 11
-    },{
-      name: "Desember",
-      population: 12.4,
-      color: "#696969",
-      legendFontColor: "white",
-      legendFontSize: 11
     }
   ])
 
@@ -105,31 +59,30 @@ const HomeScreen = props => {
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={apply("py-3 mx-4 font-medium text-14")}>Analityc Transaksi</Text>
-      <View style={apply("shadow bg-white mx-3 rounded rounded-md")}>
-        <PieChart
+      <View style={apply("row items-center justify-end mt-5 mb-2")}>
+          <Image source={Images.IcSearch} style={apply("w-24 h-24")}/>
+          <Image source={Images.IcBell} style={apply("w-24 h-24")}/>
+      </View>
+      <View style={apply("row items-center mb-3")}> 
+        <View style={apply("flex")}>
+          <Text style={apply("font-regular text-18")}>Selamat Pagi</Text>
+          <Text style={apply("py-1 font-regular text-14")}>Angga Maulana</Text>
+        </View>
+      </View>
+      <View>
+        <FlatList
           data={data}
-          width={Dimensions.get("window").width - 24}
-          height={230}
-          chartConfig={{
-              color: (opacity = 1) => `white`,
-              labelColor: (opacity = 1) => `white`,
-              style: {
-                  borderRadius: 5
-              }
-          }}
-          backgroundColor="#048f15"
-          accessor="population"
-          paddingLeft="15"
-          absolute
-          style={{
-              marginVertical: 8,
-              borderRadius: 5
-          }}
+          keyExtractor={(item,index)=> index.toString()}
+          renderItem={({item}) =>(
+            <View style={apply('mx-2')}>
+              <ProdukCard item={item}/>
+            </View>
+          )}
+          horizontal={true}
         />
       </View>
-      <Text style={apply("py-3 mx-4 font-medium text-14")}>Top Rate Transaksi</Text>
-      <View style={apply("shadow bg-white mx-3 px-3 rounded rounded-md")}>
+      <Text style={apply("py-3 font-medium text-14")}>Top Rate Transaksi</Text>
+      <View style={apply("shadow shadow-lg bg-white rounded rounded-md my-3 mx-1 px-3")}>
         <FlatList
           data={data}
           keyExtractor={(item,index)=> index.toString()}

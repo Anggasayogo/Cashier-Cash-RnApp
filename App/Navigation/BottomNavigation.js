@@ -62,7 +62,7 @@ function MyTabBar({ state, descriptors, navigation }) {
   }
 
   return (
-    <View style={apply("row shadow shadow-lg")}>
+    <View style={apply("row shadow shadow-xl bg-white")}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
