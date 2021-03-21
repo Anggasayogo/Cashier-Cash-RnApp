@@ -6,7 +6,7 @@ import sagaPlugin from 'reactotron-redux-saga'
 import { name } from '../../app.json'
 
 const reactotron = Reactotron
-  .configure({ name })
+  .configure({ name : 'CashierCash', host: '192.168.1.121'})
   .useReactNative()
   .use(reduxPlugin({ onRestore: Immutable }))
   .use(sagaPlugin())

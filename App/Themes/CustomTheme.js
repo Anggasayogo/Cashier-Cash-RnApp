@@ -226,6 +226,7 @@ export default {
   "mx--1": { marginHorizontal: -4 },
   "mt-75": { marginTop: 300 },
   "mt-76": { marginTop: 304 },
+  "mt-13": { marginTop: 13 },
   "mt-100" : { marginTop : 110},
   "mt-full" : {marginTop : "100%"},
   "mt-150": { marginTop: 150 },
@@ -236,6 +237,7 @@ export default {
   "pr--1" : {paddingRight : -1},
   "pr-2" : {paddingRight : 2},
   "ml--1": { marginLeft: -1 },
+  "ml--3": { marginLeft: -30 },
   "pl-25": { paddingLeft: 30 },
   "mt-+1" : {marginTop : 2},
 
@@ -247,7 +249,7 @@ export default {
   "black-soft": "rgba(0,0,0, 0.15)",
   "black-opacity-75": "rgba(0,0,0, 0.75)",
   "primary": "#01a315",
-  "gray-default": "#7a869a",
+  "gray-default": "#979797",
   "dark-100": "#F5F5F5",
   "dark-200": "#DDDDDD",
   "dark-300": "#E2E2E2",
@@ -256,7 +258,7 @@ export default {
   // border color
   "border-black-opacity-75": { borderColor: 'rgba(0,0,0, 0.75)' },
   "border-primary": { borderColor: "#01a315" },
-  "border-gray-default": { borderColor: "#7a869a" },
+  "border-gray-default": { borderColor: "#979797" },
   "border-gray-dark" : { borderColor: "#d8d8d8" },
   "border-gray-soft": { borderColor: "#f8f8f8" },
   "border-dark-100": { borderColor: "#F5F5F5" },
@@ -280,7 +282,7 @@ export default {
   "bg-dark-100": { backgroundColor: "#F5F5F5" },
   "bg-dark-200": { backgroundColor: "#DDDDDD" },
   "bg-dark-300": { backgroundColor: "#E2E2E2" },
-  "bg-gray-default": { backgroundColor: "#7a869a" },
+  "bg-gray-default": { backgroundColor: "#979797" },
   "bg-gray-semi-soft": { backgroundColor: "#d8d8d8" },
   "bg-gray-dark": { backgroundColor: "#d8d8d8" },
   "bg-gray-soft": { backgroundColor: "#f8f8f8" },
@@ -289,7 +291,7 @@ export default {
 
   // text-color
   "text-black-opacity-75": { color: 'rgba(0,0,0, 0.75)' },
-  "text-gray-default": { color: "#7a869a" },
+  "text-gray-default": { color: "#979797" },
   "text-gray-soft": { color: "#a9a9a9" },
   "text-primary": { color: "#4FC86A" },
   "text-dark": { color: "#002251" },

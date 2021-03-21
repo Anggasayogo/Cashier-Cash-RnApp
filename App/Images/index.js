@@ -10,6 +10,8 @@ const Images = {
   IcNext: require('./icons/next.png'),
   IcSearch: require('./icons/icSearch.png'),
   IcBell: require('./icons/icBell.png'),
+  IcFilter: require('./icons/icFilter.png'),
+  IcActive: require('./icons/icAcive.png'),
 
   // BottomTabIcons
   IcHomeActive: require('./bottomtab/home-active.png'),

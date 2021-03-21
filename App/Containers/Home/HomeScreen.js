@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { View,Dimensions,Text, FlatList,ScrollView,Image } from 'react-native'
+import { View,Dimensions,Text, FlatList,ScrollView,Image} from 'react-native'
 import SafeAreaView from 'react-native-safe-area-view'
 import Images from '../../Images'
 
@@ -10,8 +10,10 @@ import ProdukCard from '../../Components/ProdukCard'
 // Styles
 import styles from '../Styles/Home/HomeScreenStyle'
 import { apply } from '../../Themes/OsmiProvider'
+import Serching from '../../Components/Serching'
 
 const screenWidth = Dimensions.get("window").width;
+
 const HomeScreen = props => {
   const [data,setData] = useState([
     {
@@ -27,17 +29,11 @@ const HomeScreen = props => {
         legendFontColor: "white",
         legendFontSize: 11
     },{
-        name: "Maret",
-        population: 34.2,
-        color: "yellow",
-        legendFontColor: "white",
-        legendFontSize: 11
-    },{
-        name: "April",
-        population: 14.2,
-        color: "orange",
-        legendFontColor: "white",
-        legendFontSize: 11
+      name: "February",
+      population: 39.2,
+      color: "red",
+      legendFontColor: "white",
+      legendFontSize: 11
     }
   ])
 
@@ -59,16 +55,17 @@ const HomeScreen = props => {
 
   return (
     <ScrollView style={styles.container}>
-      <View style={apply("row items-center justify-end mt-5 mb-2")}>
+      {/* <View style={apply("row items-center justify-end mt-5 mb-2")}>
           <Image source={Images.IcSearch} style={apply("w-24 h-24")}/>
           <Image source={Images.IcBell} style={apply("w-24 h-24")}/>
-      </View>
+      </View> */}
       <View style={apply("row items-center mb-3")}> 
         <View style={apply("flex")}>
-          <Text style={apply("font-regular text-18")}>Selamat Pagi</Text>
+          <Text style={apply("font-regular text-18 mt-5")}>Selamat Pagi</Text>
           <Text style={apply("py-1 font-regular text-14")}>Angga Maulana</Text>
         </View>
       </View>
+      <Serching/>
       <View>
         <FlatList
           data={data}
